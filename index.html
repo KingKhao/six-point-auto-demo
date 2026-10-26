@@ -176,17 +176,17 @@
 </section>
 
 <section class="fleetlist" id="works" aria-labelledby="works-h">
-  <div class="works-stage" data-in>
+  <div class="works-stage" data-in id="vehicle-panel" role="tabpanel" aria-labelledby="vehicle-tab-0" tabindex="0">
     <div class="works-hex"><img id="works-img" src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1100&h=950&q=70" width="1100" height="950" alt="A blue hatchback parked on a street" loading="lazy"></div>
     <div class="works-fact" aria-live="polite"><h3 id="works-title">Cars and SUVs</h3><p id="works-text">Domestic and import, from the commuter to the family hauler. Same-day oil, brakes and diagnostics most weekdays.</p></div>
   </div>
   <div class="works-pick">
     <h2 id="works-h">What we work on</h2>
     <ul role="tablist" aria-labelledby="works-h">
-      <li><button role="tab" aria-selected="true" data-work="0"><span class="hexdot" aria-hidden="true"></span>Cars and SUVs</button></li>
-      <li><button role="tab" aria-selected="false" data-work="1"><span class="hexdot" aria-hidden="true"></span>Pickups</button></li>
-      <li><button role="tab" aria-selected="false" data-work="2"><span class="hexdot" aria-hidden="true"></span>Diesel</button></li>
-      <li><button role="tab" aria-selected="false" data-work="3"><span class="hexdot" aria-hidden="true"></span>Farm equipment</button></li>
+      <li role="presentation"><button role="tab" aria-selected="true" data-work="0" id="vehicle-tab-0" aria-controls="vehicle-panel"><span class="hexdot" aria-hidden="true"></span>Cars and SUVs</button></li>
+      <li role="presentation"><button role="tab" aria-selected="false" data-work="1" id="vehicle-tab-1" aria-controls="vehicle-panel"><span class="hexdot" aria-hidden="true"></span>Pickups</button></li>
+      <li role="presentation"><button role="tab" aria-selected="false" data-work="2" id="vehicle-tab-2" aria-controls="vehicle-panel"><span class="hexdot" aria-hidden="true"></span>Diesel</button></li>
+      <li role="presentation"><button role="tab" aria-selected="false" data-work="3" id="vehicle-tab-3" aria-controls="vehicle-panel"><span class="hexdot" aria-hidden="true"></span>Farm equipment</button></li>
     </ul>
   </div>
 </section>
