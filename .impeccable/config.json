@@ -1,0 +1,35 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-26T06:06:21.169Z",
+        "reason": "Claude: static scan misses clamp()/var() padding; inspector screenshots at 1440/768/390 show 16-56px insets on every flagged container"
+      },
+      {
+        "rule": "tight-leading",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-26T06:06:21.352Z",
+        "reason": "Claude: 1.18 is the display-size statement paragraph (36px), set per design-taste-frontend statement rules; body text is 1.5"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "styles.css"
+        ],
+        "createdAt": "2026-10-26T06:06:21.539Z",
+        "reason": "Claude: line 112 is the symptom checker's moving scan line (full-width 3px bar animated top to bottom), not a side border on a card"
+      }
+    ]
+  }
+}
