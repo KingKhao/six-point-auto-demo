@@ -19,7 +19,7 @@
       "When braking": ["Brake pads and rotors", 180, 420, "1.5 to 2.5 hours", "A squeal usually means the wear indicators are touching; grinding means metal on metal. Don't wait on grinding."],
       "When turning": ["CV axle or steering linkage", 220, 480, "1 to 3 hours", "A clicking on tight turns is the classic worn CV joint."],
       "Over bumps": ["Suspension: struts, links or bushings", 250, 700, "2 to 4 hours", "Clunks over bumps are usually a worn sway bar link or strut mount."],
-      "All the time, louder with speed": ["Wheel bearing or exhaust", 220, 520, "1 to 2 hours", "A hum that changes when you swerve gently is usually a wheel bearing."] } },
+      "All the time, louder with speed": ["Wheel bearing or exhaust", 220, 520, "1 to 2 hours", "Do not perform driving tests to diagnose this. A technician can inspect the wheel bearings and exhaust; stop driving and arrange help if handling feels unsafe."] } },
     brakes: { name: "Brakes", q: "What are the brakes doing?", a: {
       "Squealing or grinding": ["Brake pads and rotors", 180, 420, "1.5 to 2.5 hours", "Grinding can ruin rotors fast. The sooner, the cheaper."],
       "Pedal feels soft": ["Brake fluid or hydraulic repair", 120, 450, "1 to 2 hours", "A soft or sinking pedal can be a leak. Drive it as little as possible.", true],
@@ -182,7 +182,8 @@
   const wImg = $("#works-img");
   $$("[data-work]").forEach(b => b.addEventListener("click", () => {
     const [t, txt, id, alt] = WORKS[+b.dataset.work];
-    $$("[data-work]").forEach(x => x.setAttribute("aria-selected", String(x === b)));
+    $("#vehicle-panel").setAttribute("aria-labelledby", b.id);
+    $$("[data-work]").forEach(x => { x.setAttribute("aria-selected", String(x === b)); x.tabIndex = x === b ? 0 : -1; });
     wImg.classList.add("out");
     setTimeout(() => {
       wImg.src = `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1100&h=950&q=70`; wImg.alt = alt;
@@ -191,6 +192,17 @@
       if (wImg.complete) wImg.classList.remove("out");
     }, reduced ? 0 : 260);
   }));
+  const workTabs = $$("[data-work]");
+  workTabs.forEach((button, index) => {
+    button.tabIndex = index === 0 ? 0 : -1;
+    button.addEventListener("keydown", event => {
+      const key = event.key;
+      if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(key)) return;
+      event.preventDefault();
+      const target = key === "Home" ? 0 : key === "End" ? workTabs.length - 1 : (index + (key === "ArrowRight" ? 1 : -1) + workTabs.length) % workTabs.length;
+      workTabs[target].focus(); workTabs[target].click();
+    });
+  });
   WORKS.forEach(w => { const i = new Image(); i.src = `https://images.unsplash.com/${w[2]}?auto=format&fit=crop&w=1100&h=950&q=70`; });
 
   // ---------- repair status ----------
