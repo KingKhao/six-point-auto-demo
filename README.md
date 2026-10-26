@@ -2,6 +2,10 @@
 
 Created October 26, 2026 for Clinch Valley Digital's "Example Sites". Six Point Auto & Diesel is not a real business.
 
+- Live: https://six-point-auto-demo.vercel.app/
+- Private GitHub: https://github.com/KingKhao/six-point-auto-demo
+- Vercel project: wkb-projects/six-point-auto-demo, connected to GitHub main.
+
 - Static HTML, CSS and vanilla JavaScript (`index.html`, `styles.css`, `app.js`). No build step, backend, API keys, cookies or storage.
 - Search indexing is disabled (`noindex` meta tag and `X-Robots-Tag` header).
 - Every flow is a front-end mock. Nothing typed into the page is saved or sent, and each confirmation says so.
