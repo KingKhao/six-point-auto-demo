@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Six Point Auto &amp; Diesel | Demo site by Clinch Valley Digital</title>
+<meta name="description" content="A fictional auto, truck and diesel repair shop in Maynardville, Tennessee, built as a demo by Clinch Valley Digital: symptom checker, honest price ranges, quote requests and a repair status tracker.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f1f0ec">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 35'%3E%3Cpath d='M10 0h20l10 17.5L30 35H10L0 17.5z' fill='%23ff5b1f'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=pilcrow-rounded@400,500,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="vh" href="#main">Skip to content</a>
+<div class="demo-bar" role="note">
+  <span><b>DEMO</b> — Example site by Clinch Valley Digital. Six Point Auto &amp; Diesel is fictional; nothing on this page is saved or sent.</span>
+  <a href="https://clinchvalleydigital.com">Want one for your shop?</a>
+</div>
+
+<header class="nav" id="nav">
+  <a class="mark" href="#top" aria-label="Six Point Auto and Diesel, home"><i aria-hidden="true"></i>Six Point</a>
+  <nav aria-label="Main">
+    <ul>
+      <li><a href="#checker">What's wrong?</a></li>
+      <li><a href="#prices">Prices</a></li>
+      <li><a href="#status">Repair status</a></li>
+      <li><a href="#fleet">Fleet</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+  </nav>
+  <a class="call" href="tel:+18655550168">(865) 555-0168</a>
+  <a class="nav-sos" href="#breakdown">Broke down?</a>
+  <a class="btn small" href="#quote">Get a quote</a>
+</header>
+
+<main id="main">
+<section class="hero" id="top" aria-labelledby="h1">
+  <div class="hero-shape" aria-hidden="true"></div>
+  <figure class="hero-photo"><div class="hero-photo-inner">
+    <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?auto=format&fit=crop&w=1100&h=950&q=70" width="1100" height="950" alt="A mechanic leaning into the engine bay of a grey SUV with its hood up, inside a repair shop" fetchpriority="high">
+  </div></figure>
+  <div class="hero-copy">
+    <h1 id="h1">What's wrong with your vehicle?</h1>
+    <p class="lead">Six Point Auto &amp; Diesel in Maynardville, Tennessee. Tell us the symptom and see a price range in a minute, not "bring it in and we'll see."</p>
+    <div class="actions">
+      <a class="btn" href="#quote">Get a quote</a>
+      <a class="link" href="#quote" data-service="Scheduled service">Book a service</a>
+    </div>
+    <div class="symptoms">
+      <p id="start-label">Start with what you're noticing:</p>
+      <div class="chips" role="group" aria-labelledby="start-label">
+        <button class="chip" data-start="noise" type="button"><span class="hexdot" aria-hidden="true"></span>Strange noise</button>
+        <button class="chip" data-start="brakes" type="button"><span class="hexdot" aria-hidden="true"></span>Brakes</button>
+        <button class="chip" data-start="engine" type="button"><span class="hexdot" aria-hidden="true"></span>Engine light</button>
+        <button class="chip" data-start="leak" type="button"><span class="hexdot" aria-hidden="true"></span>Leak</button>
+        <button class="chip" data-start="steering" type="button"><span class="hexdot" aria-hidden="true"></span>Steering</button>
+        <button class="chip" data-start="start" type="button"><span class="hexdot" aria-hidden="true"></span>Won't start</button>
+      </div>
+    </div>
+  </div>
+  <p class="hero-facts"><span>Mon–Fri 7:30–5:30, Sat 8–noon</span><span>Cars, pickups, diesel and farm equipment</span><span>Price range before any work starts</span></p>
+</section>
+
+<section class="checker" id="checker" aria-labelledby="checker-h">
+  <figure class="checker-photo"><img src="https://images.unsplash.com/photo-1599256872237-5dcc0fbe9668?auto=format&fit=crop&w=900&h=1300&q=70" width="900" height="1300" alt="Two hands working on wiring and lines under a vehicle painted safety orange" loading="lazy"></figure>
+  <div class="checker-main" data-in>
+    <h2 id="checker-h">Find the likely fix</h2>
+    <p>Pick the area, answer two quick questions, and see what it usually turns out to be and what it usually costs here. It's a guide, not a diagnosis: we confirm everything on the lift before you pay for anything.</p>
+    <div class="tool" id="tool" aria-live="polite">
+      <div class="scan" id="scan" aria-hidden="true"></div>
+      <div class="tool-progress" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      <div id="tool-body">
+        <noscript><p>The symptom guide needs JavaScript. Call (865) 555-0168 and describe what you're noticing; we'll give you a price range on the phone.</p></noscript>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote" aria-labelledby="quote-h">
+  <div class="quote-head" data-in>
+    <h2 id="quote-h">Get a quote in four steps</h2>
+    <p>Tell us the vehicle and the problem. We reply with a price range within two business hours, by call or text, and nothing happens until you say yes.</p>
+  </div>
+  <div class="steps-bar" aria-hidden="true" id="steps-bar"><div>Vehicle</div><div>Service</div><div>Problem</div><div>Contact</div></div>
+  <div class="quote-form">
+    <form id="quote-form" novalidate>
+      <div class="pane" data-pane="0">
+        <fieldset>
+          <legend class="vh">Your vehicle</legend>
+          <div class="row">
+            <div class="field"><label for="q-year">Year</label><input id="q-year" name="year" type="number" inputmode="numeric" min="1960" max="2027" placeholder="2016" required></div>
+            <div class="field"><label for="q-make">Make</label><input id="q-make" name="make" type="text" autocomplete="off" placeholder="Ford" required></div>
+            <div class="field"><label for="q-model">Model</label><input id="q-model" name="model" type="text" autocomplete="off" placeholder="F-250 Super Duty" required></div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="pane" data-pane="1" hidden>
+        <div class="field"><label for="q-service">Service needed</label>
+          <select id="q-service" name="service" required>
+            <option value="">Choose one</option>
+            <option>Diagnostics / check engine light</option><option>Brakes</option><option>Oil change</option><option>Tires and alignment</option>
+            <option>Battery, starting and charging</option><option>Suspension and steering</option><option>Leak</option><option>Diesel service</option>
+            <option>Farm equipment</option><option>Scheduled service</option><option>Not sure</option>
+          </select></div>
+        <fieldset class="field"><legend>How soon?</legend>
+          <div class="chips" role="radiogroup" aria-label="How soon">
+            <button type="button" class="chip" role="radio" aria-checked="true" aria-pressed="true" data-soon="This week"><span class="hexdot" aria-hidden="true"></span>This week</button>
+            <button type="button" class="chip" role="radio" aria-checked="false" aria-pressed="false" data-soon="Next week"><span class="hexdot" aria-hidden="true"></span>Next week</button>
+            <button type="button" class="chip" role="radio" aria-checked="false" aria-pressed="false" data-soon="Just pricing it"><span class="hexdot" aria-hidden="true"></span>Just pricing it</button>
+          </div></fieldset>
+      </div>
+      <div class="pane" data-pane="2" hidden>
+        <div class="field"><label for="q-desc">What's going on?</label>
+          <textarea id="q-desc" name="desc" maxlength="600" placeholder="Grinding from the front when I brake, started last week. About 142,000 miles." required></textarea></div>
+      </div>
+      <div class="pane" data-pane="3" hidden>
+        <div class="row2">
+          <div class="field"><label for="q-name">Your name</label><input id="q-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="q-phone">Phone</label><input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(865) 555-0100" required></div>
+        </div>
+        <fieldset class="field"><legend>Best way to reach you</legend>
+          <div class="chips" role="radiogroup" aria-label="Best way to reach you">
+            <button type="button" class="chip" role="radio" aria-checked="true" aria-pressed="true" data-reach="Text"><span class="hexdot" aria-hidden="true"></span>Text</button>
+            <button type="button" class="chip" role="radio" aria-checked="false" aria-pressed="false" data-reach="Call"><span class="hexdot" aria-hidden="true"></span>Call</button>
+          </div></fieldset>
+      </div>
+      <p class="err" id="q-err" role="alert"></p>
+      <div class="form-nav">
+        <button class="btn" type="submit" id="q-next">Next: service</button>
+        <button class="link" type="button" id="q-back" hidden>Back</button>
+      </div>
+    </form>
+    <div id="quote-done" hidden></div>
+  </div>
+  <aside class="quote-side" data-in aria-label="What happens after you ask">
+    <div class="ph"><img src="https://images.unsplash.com/photo-1504222490345-c075b6008014?auto=format&fit=crop&w=800&h=700&q=70" width="800" height="700" alt="A smiling mechanic in a work shirt and cap beside the open hood of a yellow car" loading="lazy"></div>
+    <h3>What happens next</h3>
+    <ul class="ticks">
+      <li><span class="hexdot" aria-hidden="true"></span>A real price range, by text or call, within two business hours.</li>
+      <li><span class="hexdot" aria-hidden="true"></span>We inspect it and confirm the exact price before any work.</li>
+      <li><span class="hexdot" aria-hidden="true"></span>Nothing over the quote without your OK. Old parts kept for you to see.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="prices" id="prices" aria-labelledby="prices-h">
+  <div class="prices-head" data-in>
+    <h2 id="prices-h">What things cost here</h2>
+    <p>Ranges, not fine print. Your exact price depends on the vehicle and what we find, and you see it before we start. Diagnostic fees come off the repair when you have us fix it.</p>
+  </div>
+  <div class="cat"><h3>Keep it running</h3><span>5 services</span></div>
+  <div class="items" data-in>
+    <div class="item"><div class="thumb"><img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=160&h=140&q=60" width="160" height="140" alt="" loading="lazy"></div><div><div class="top"><b>Oil change, conventional</b><span class="price">$45–$65</span></div><p>Up to 5 quarts, new filter, fluid top-off and a quick look at belts, hoses and tires.</p><p class="time">About 30 minutes</p></div></div>
+    <div class="item"><div class="thumb"><img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=160&h=140&q=60&sat=-60" width="160" height="140" alt="" loading="lazy"></div><div><div class="top"><b>Oil change, full synthetic</b><span class="price">$75–$110</span></div><p>For most newer cars and trucks. Same checks, longer interval between changes.</p><p class="time">About 30 minutes</p></div></div>
+    <div class="item"><div class="thumb"><img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&w=160&h=140&q=60" width="160" height="140" alt="" loading="lazy"></div><div><div class="top"><b>Diesel oil service</b><span class="price">$140–$260</span></div><p>Up to 15 quarts of diesel-rated oil, filter, fuel water separator drained and checked.</p><p class="time">About 1 hour</p></div></div>
+    <div class="item"><div class="thumb"><img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=160&h=140&q=60" width="160" height="140" alt="" loading="lazy"></div><div><div class="top"><b>Tire rotation</b><span class="price">$25</span></div><p>Free with any oil change. Tire pressures set and tread depth written down for you.</p><p class="time">About 20 minutes</p></div></div>
+    <div class="item"><div class="thumb"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=160&h=140&q=60" width="160" height="140" alt="" loading="lazy"></div><div><div class="top"><b>Alignment</b><span class="price">$95–$140</span></div><p>Four-wheel alignment with before and after numbers printed on your receipt.</p><p class="time">About 1 hour</p></div></div>
+  </div>
+  <div class="cat"><h3>Fix what's wrong</h3><span>5 services</span></div>
+  <div class="items" data-in>
+    <div class="item"><div class="thumb"><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=160&h=140&q=60" width="160" height="140" alt="" loading="lazy"></div><div><div class="top"><b>Diagnostics</b><span class="price">$95</span></div><p>Codes read, tested and explained in plain words. Comes off the repair if we fix it.</p><p class="time">About 1 hour</p></div></div>
+    <div class="item"><div class="thumb"><img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=160&h=140&q=60" width="160" height="140" alt="" loading="lazy"></div><div><div class="top"><b>Brakes, per axle</b><span class="price">$180–$420</span></div><p>Pads, rotors if they're under spec, hardware and a road test. Heavy-duty trucks run higher.</p><p class="time">1.5 to 2.5 hours</p></div></div>
+    <div class="item"><div class="thumb"><img src="https://images.unsplash.com/photo-1597766325363-f5576d851d6a?auto=format&fit=crop&w=160&h=140&q=60" width="160" height="140" alt="" loading="lazy"></div><div><div class="top"><b>Battery, starting and charging</b><span class="price">$160–$550</span></div><p>Free battery and alternator test. Battery, starter or alternator replaced if needed.</p><p class="time">30 minutes to 2 hours</p></div></div>
+    <div class="item"><div class="thumb"><img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=160&h=140&q=60" width="160" height="140" alt="" loading="lazy"></div><div><div class="top"><b>Tires, mount and balance</b><span class="price">$25 a tire</span></div><p>We carry common sizes and order the rest overnight. Tires themselves from about $110 each.</p><p class="time">About 1 hour for four</p></div></div>
+    <div class="item"><div class="thumb"><img src="https://images.unsplash.com/photo-1599256872237-5dcc0fbe9668?auto=format&fit=crop&w=160&h=140&q=60" width="160" height="140" alt="" loading="lazy"></div><div><div class="top"><b>Diesel diagnostics and repair</b><span class="price">From $140</span></div><p>Injectors, glow plugs, turbos, EGR and DEF systems on Power Stroke, Duramax and Cummins.</p><p class="time">Quoted after testing</p></div></div>
+  </div>
+  <div class="pay" data-in>
+    <h3>Ways to pay</h3>
+    <p>Card, cash or check, paid when you pick up. Repairs over $500 can be split into monthly payments through a financing partner, subject to their approval; ask us and we'll walk you through it before any work starts. No surprise fees: if the price is going to change, we call you first.</p>
+  </div>
+</section>
+
+<section class="fleetlist" id="works" aria-labelledby="works-h">
+  <div class="works-stage" data-in>
+    <div class="works-hex"><img id="works-img" src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1100&h=950&q=70" width="1100" height="950" alt="A blue hatchback parked on a street" loading="lazy"></div>
+    <div class="works-fact" aria-live="polite"><h3 id="works-title">Cars and SUVs</h3><p id="works-text">Domestic and import, from the commuter to the family hauler. Same-day oil, brakes and diagnostics most weekdays.</p></div>
+  </div>
+  <div class="works-pick">
+    <h2 id="works-h">What we work on</h2>
+    <ul role="tablist" aria-labelledby="works-h">
+      <li><button role="tab" aria-selected="true" data-work="0"><span class="hexdot" aria-hidden="true"></span>Cars and SUVs</button></li>
+      <li><button role="tab" aria-selected="false" data-work="1"><span class="hexdot" aria-hidden="true"></span>Pickups</button></li>
+      <li><button role="tab" aria-selected="false" data-work="2"><span class="hexdot" aria-hidden="true"></span>Diesel</button></li>
+      <li><button role="tab" aria-selected="false" data-work="3"><span class="hexdot" aria-hidden="true"></span>Farm equipment</button></li>
+    </ul>
+  </div>
+</section>
+
+<section class="status" id="status" aria-labelledby="status-h">
+  <div class="status-main" data-in>
+    <h2 id="status-h">Is my truck done?</h2>
+    <p>Every job gets a ticket number. Check it here any time instead of calling the shop, and we text you the moment it's ready.</p>
+    <form class="lookup" id="lookup">
+      <div class="field"><label for="ticket">Ticket number</label><input id="ticket" type="text" inputmode="numeric" value="1042" autocomplete="off"></div>
+      <button class="btn" type="submit">Check status</button>
+    </form>
+    <p class="err" id="ticket-err" role="alert"></p>
+    <ol class="timeline" id="timeline" aria-live="polite">
+      <li><span class="node" aria-hidden="true"></span><div><b>Checked in</b><small>Dropped off, keys in the box</small></div><time></time></li>
+      <li><span class="node" aria-hidden="true"></span><div><b>Diagnosed</b><small>Front pads at 2mm, rotors scored</small></div><time></time></li>
+      <li><span class="node" aria-hidden="true"></span><div><b>Parts ordered</b><small>Approved by text, parts due 1 p.m.</small></div><time></time></li>
+      <li><span class="node" aria-hidden="true"></span><div><b>In progress</b><small>On lift 2</small></div><time></time></li>
+      <li><span class="node" aria-hidden="true"></span><div><b>Ready for pickup</b><small>Road tested, paperwork at the counter</small></div><time></time></li>
+    </ol>
+    <p class="ticket-meta" id="ticket-meta"></p>
+  </div>
+  <div class="status-phone" aria-label="Example text messages a customer would receive">
+    <div class="phone">
+      <p class="who">Six Point Auto<small>Text message</small></p>
+      <p class="bubble" data-b="0">Six Point: your 2016 F-250 is checked in, ticket #1042. Track it at sixpoint.example/status</p>
+      <p class="bubble" data-b="1">Front pads are at 2mm and the rotors are scored. Pads and rotors, front axle: $386. Reply YES to approve.</p>
+      <p class="bubble me" data-b="2">YES</p>
+      <p class="bubble" data-b="3">Your truck is ready! Brakes done and road tested. We're open till 5:30. Total $386.</p>
+      <p class="meta">Demo messages. Nothing is sent.</p>
+    </div>
+  </div>
+</section>
+
+<section class="statement" aria-label="Why reminders matter">
+  <p data-in><span>Most breakdowns start small: a skipped <span class="inl"><img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=120&h=100&q=60" width="120" height="100" alt="Oil being poured into an engine"></span> oil change, a worn <span class="inl"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=120&h=100&q=60" width="120" height="100" alt="A white SUV on a dirt road"></span> tire or a tired <span class="inl"><img src="https://images.unsplash.com/photo-1597766325363-f5576d851d6a?auto=format&fit=crop&w=120&h=100&q=60" width="120" height="100" alt="Jumper cables clamped to a battery"></span> battery nobody tested.</span></p>
+</section>
+<section class="remind" id="reminders" aria-labelledby="remind-h">
+  <form class="remind-form" id="remind-form" data-in>
+    <h2 id="remind-h">We'll remember for you</h2>
+    <div class="field"><label for="r-vehicle">Your vehicle</label><input id="r-vehicle" type="text" value="2016 Ford F-250" autocomplete="off"></div>
+    <div class="row2">
+      <div class="field"><label for="r-date">Last oil change</label><input id="r-date" type="date"></div>
+      <div class="field"><label for="r-oil">Oil type</label><select id="r-oil"><option value="3">Conventional</option><option value="6" selected>Synthetic</option><option value="4">Diesel</option></select></div>
+    </div>
+    <label class="switch"><input type="checkbox" id="r-text" checked> Text me a reminder a week before</label>
+  </form>
+  <div class="remind-out" aria-live="polite">
+    <div class="due hot"><span>Next oil change</span><strong id="due-oil">Apr 12</strong><small id="due-oil-note">or 5,000 miles, whichever comes first</small></div>
+    <div class="due"><span>Next tire rotation</span><strong id="due-tire">Apr 12</strong><small>every other oil change, free with it</small></div>
+    <div class="remind-phone">
+      <p id="remind-say">You'll get one text a week before it's due, with a link to book. Reply STOP any time. Demo only: nothing is scheduled or sent.</p>
+      <div class="phone"><p class="who">Six Point Auto<small>Text message</small></p><p class="bubble show" id="remind-bubble">Six Point: your 2016 Ford F-250 is due for an oil change and rotation on Apr 12. Tap to book: sixpoint.example/book</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="fleet" id="fleet" aria-labelledby="fleet-h">
+  <div class="side ph"><img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=600&h=900&q=60" width="600" height="900" alt="A wall of wrenches and sockets hanging in a shop" loading="lazy"></div>
+  <div class="fleet-tile" data-in>
+    <div>
+      <h2 id="fleet-h">Trucks that work for a living</h2>
+      <ul>
+        <li><span class="hexdot" aria-hidden="true"></span>Priority bay time for business vehicles</li>
+        <li><span class="hexdot" aria-hidden="true"></span>One monthly invoice for every unit</li>
+        <li><span class="hexdot" aria-hidden="true"></span>Service history kept per truck, ready for your records</li>
+        <li><span class="hexdot" aria-hidden="true"></span>Pickups, box trucks, diesel and farm equipment</li>
+      </ul>
+    </div>
+    <form class="fleet-form" id="fleet-form" novalidate>
+      <div class="field"><label for="f-biz">Business name</label><input id="f-biz" type="text" autocomplete="organization" required></div>
+      <div class="field"><label for="f-units">How many vehicles?</label><input id="f-units" type="number" inputmode="numeric" min="1" max="999" placeholder="6" required></div>
+      <p class="err" id="f-err" role="alert"></p>
+      <button class="btn dark" type="submit">Talk to us about fleet service</button>
+    </form>
+  </div>
+  <div class="side flat" aria-hidden="true"></div>
+</section>
+
+<section class="reviews" id="reviews" aria-labelledby="reviews-h">
+  <figure class="portrait"><img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=900&h=1200&q=70" width="900" height="1200" alt="A mechanic in black gloves working on an engine" loading="lazy"></figure>
+  <div class="quote-col" data-in>
+    <h2 id="reviews-h">What customers say</h2>
+    <div class="quote-swap" id="quote-swap">
+      <blockquote id="review-text">They said the grind was pads and rotors, texted me the price, and had it ready that afternoon for exactly that.</blockquote>
+      <p class="who" id="review-who">Pickup owner, Maynardville</p>
+    </div>
+    <p class="tag">Sample reviews written for this demo. Not real customers.</p>
+    <div class="pager" role="group" aria-label="Choose a sample review">
+      <button type="button" aria-current="true" data-r="0" aria-label="Sample review 1">1</button>
+      <button type="button" aria-current="false" data-r="1" aria-label="Sample review 2">2</button>
+      <button type="button" aria-current="false" data-r="2" aria-label="Sample review 3">3</button>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit" aria-labelledby="visit-h">
+  <h2 id="visit-h">Find the shop</h2>
+  <div class="visit-grid">
+    <div class="map" role="img" aria-label="Simple map: the shop sits on Ridge Line Road just off Highway 33, north of the Maynardville town square">
+      <svg viewBox="0 0 800 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect width="800" height="460" fill="#c9ccce"/>
+        <path d="M-20 300 C 160 280, 300 330, 470 250 S 700 120, 840 140" fill="none" stroke="#f1f0ec" stroke-width="34"/>
+        <path d="M300 -20 L 330 180 L 360 480" fill="none" stroke="#f1f0ec" stroke-width="22"/>
+        <path d="M470 250 L 470 210 L 560 200" fill="none" stroke="#f1f0ec" stroke-width="14"/>
+        <path d="M80 60 h120 v80 h-120z M600 330 h140 v90 h-140z M120 360 h100 v60 h-100z" fill="#e2e1dc"/>
+        <text x="40" y="282" font-family="Arial" font-size="18" font-weight="700" fill="#15181b">Hwy 33</text>
+        <text x="340" y="40" font-family="Arial" font-size="16" fill="#15181b">To town square</text>
+        <text x="520" y="190" font-family="Arial" font-size="15" fill="#15181b">Ridge Line Rd</text>
+      </svg>
+      <div class="pin"><i aria-hidden="true"></i><span>Six Point Auto &amp; Diesel</span></div>
+    </div>
+    <div class="hours">
+      <h3>1406 Ridge Line Road, Maynardville, TN</h3>
+      <table aria-label="Shop hours">
+        <tbody id="hours">
+          <tr data-d="1"><td>Monday</td><td>7:30 a.m.–5:30 p.m.</td></tr>
+          <tr data-d="2"><td>Tuesday</td><td>7:30 a.m.–5:30 p.m.</td></tr>
+          <tr data-d="3"><td>Wednesday</td><td>7:30 a.m.–5:30 p.m.</td></tr>
+          <tr data-d="4"><td>Thursday</td><td>7:30 a.m.–5:30 p.m.</td></tr>
+          <tr data-d="5"><td>Friday</td><td>7:30 a.m.–5:30 p.m.</td></tr>
+          <tr data-d="6"><td>Saturday</td><td>8 a.m.–noon</td></tr>
+          <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Drop-off:</strong> park in the gravel lot by bay 3 and use the key box by the office door. Night drop is fine; put your name and number on the envelope.</p>
+      <p><strong>Parking:</strong> room for trailers and dually trucks on the north side.</p>
+    </div>
+    <div class="sos" id="breakdown">
+      <h3>Broke down?</h3>
+      <ol>
+        <li>Get off the road if you can, hazards on. On the interstate, stay in the vehicle with your seatbelt on.</li>
+        <li>If anyone is hurt or you're in a dangerous spot, call 911 first.</li>
+        <li>Call us. During hours we send the tow and hold a bay. After hours, the line forwards to our towing partner, who answers around the clock.</li>
+        <li>Tell them "Six Point" and they'll bring it straight to our lot. We start on it first thing.</li>
+      </ol>
+      <div class="sos-call">
+        <a class="btn" href="tel:+18655550168">Call (865) 555-0168</a>
+        <small>Towing within about 25 miles of Maynardville. The demo phone number is fictional.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq" aria-labelledby="faq-h">
+  <h2 id="faq-h">Fair questions</h2>
+  <div class="cards" id="cards">
+    <div class="card" style="--i:0" data-open><div class="tabwrap"><span class="tab c1">Diesel</span></div><div class="body c1"><button type="button" aria-expanded="true" aria-controls="a1" class="q" id="q1">Do you work on diesel trucks?</button><div class="a" id="a1" role="region" aria-labelledby="q1"><div><p>Yes. Power Stroke, Duramax and Cummins pickups, plus box trucks and most farm diesel. Injectors, glow plugs, turbos, EGR, DEF and regular service.</p></div></div></div></div>
+    <div class="card" style="--i:1"><div class="tabwrap"><span class="tab c2">Appointments</span></div><div class="body c2"><button type="button" aria-expanded="false" aria-controls="a2" class="q" id="q2">Do I need an appointment?</button><div class="a" id="a2" role="region" aria-labelledby="q2"><div><p>For oil changes and battery tests, no: pull in any weekday. For repairs, request a quote or book a time so a bay is open when you get here.</p></div></div></div></div>
+    <div class="card" style="--i:2"><div class="tabwrap"><span class="tab c3">Financing</span></div><div class="body c3"><button type="button" aria-expanded="false" aria-controls="a3" class="q" id="q3">Do you offer financing?</button><div class="a" id="a3" role="region" aria-labelledby="q3"><div><p>On repairs over $500, through a financing partner, subject to their approval. We go over the terms with you before any work starts.</p></div></div></div></div>
+    <div class="card" style="--i:3"><div class="tabwrap"><span class="tab c1">After hours</span></div><div class="body c1"><button type="button" aria-expanded="false" aria-controls="a4" class="q" id="q4">What if I break down after hours?</button><div class="a" id="a4" role="region" aria-labelledby="q4"><div><p>Call the shop number. After hours it forwards to our towing partner, who brings the vehicle to our lot, and we start on it first thing in the morning.</p></div></div></div></div>
+    <div class="card" style="--i:4"><div class="tabwrap"><span class="tab c2">Warranty</span></div><div class="body c2"><button type="button" aria-expanded="false" aria-controls="a5" class="q" id="q5">Is the work guaranteed?</button><div class="a" id="a5" role="region" aria-labelledby="q5"><div><p>Parts and labor are covered for 12 months or 12,000 miles. If something we fixed acts up, bring it back and we make it right.</p></div></div></div></div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="cvd" data-in>
+    <h2>Want a site like this for your shop?</h2>
+    <div>
+      <p>Built by Clinch Valley Digital: quote requests, honest pricing, a repair tracker and reminders, made for the way your shop actually works.</p>
+      <p style="margin-top:18px"><a class="btn dark" href="https://clinchvalleydigital.com">See Clinch Valley Digital</a></p>
+    </div>
+  </div>
+  <div class="bigmark" aria-hidden="true"><span>S</span><span>I</span><span>X</span><span></span><span>P</span><span>O</span><span>I</span><span>N</span><span>T</span></div>
+  <div class="foot-cols">
+    <div><b>Shop</b><a href="#checker">What's wrong?</a><a href="#quote">Get a quote</a><a href="#prices">Prices</a></div>
+    <div><b>Customers</b><a href="#status">Repair status</a><a href="#reminders">Reminders</a><a href="#fleet">Fleet service</a></div>
+    <div><b>Visit</b><p>1406 Ridge Line Road<br>Maynardville, TN 37807</p><a href="tel:+18655550168">(865) 555-0168</a></div>
+    <div><b>Breakdown</b><a href="#breakdown">What to do</a><p>Towing partner answers after hours</p></div>
+  </div>
+  <div class="foot-last">
+    <p>Six Point Auto &amp; Diesel is a fictional business. Address and phone number are made up. Demo by <a href="https://clinchvalleydigital.com">Clinch Valley Digital</a>.</p>
+    <p>Photos from Unsplash, under the Unsplash License.</p>
+  </div>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>

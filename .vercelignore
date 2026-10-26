@@ -1,0 +1,7 @@
+.git/
+.gitignore
+.taste-skill/
+*.md
+*.log
+.env*
+node_modules/
